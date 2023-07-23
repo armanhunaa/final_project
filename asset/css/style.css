@@ -1,0 +1,214 @@
+/* Inisialisasi Warna */
+:root {
+  --primary: red;
+  --bg: white;
+}
+
+/* Reset Format */
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  color: white; /* semua warna dasar */
+}
+
+/* Navbar */
+.navbar {
+  display: flex; /* agar mudah layout menu */
+  justify-content: space-between; /* agar menu di sisi kanan */
+  align-items: center; /* agar sejajar ke tengah */
+  padding: 10px 5%; /* rem (relatif dikali 16) % (agar responsive jarak padding kanan kiri) */
+  background-color: rgb(255, 255, 255); /* rgba agar transparan */
+  position: fixed; /* agar tetap diam di atas */
+  top: 0; /* supaya mentok ke atas */
+  left: 0; /* tarik penuh ke kiri */
+  right: 0; /* tarik penuh ke kanan */
+  z-index: 9999; /* agar selalu menjadi layer paling atas */
+  box-shadow: 1px 1px 10px rgba(1, 1, 1, 0.5);
+}
+
+/* Navbar Logo */
+.navbar .navbar-logo {
+  font-size: 25px;
+  font-weight: 700;
+  color: rgb(44, 44, 44);
+}
+.navbar .navbar-logo span {
+  color: rgb(2, 157, 142);
+}
+
+/* Menu Navigasi */
+.navbar .menu-navbar a {
+  color: rgb(0, 0, 0);
+  /* display a inline tidak bisa diberi margin */
+  display: inline-block; /* supaya ke samping tidak turun ke bawah */
+  font-size: 15px;
+  margin: 17px;
+}
+.navbar .menu-navbar a:hover {
+  color: #f6bf01ff;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh; /* penuh satu layar viewport height agar responsive */
+  display: flex; /* supaya main content berada persis di tengah hero secara vertikal */
+  text-align: center;
+  justify-content: center;
+  background-image: url("../image/hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero .content {
+  margin-top: 250px;
+  z-index: 9998;
+}
+.hero .content h1 {
+  font-size: 80px;
+  color: white;
+  text-shadow: 1px 1px 10px rgba(1, 1, 1, 0.5);
+}
+.hero .content p {
+  font-size: 40px;
+  font-weight: 200;
+  line-height: 0.5;
+}
+.hero .content .cta {
+  display: inline-block;
+  padding: 7px 60px;
+  color: rgb(11, 11, 11);
+  font-size: 24px;
+  font-weight: 500;
+  background-color: #f6bf01ff;
+  border-radius: 100px;
+  box-shadow: 1px 1px 10px rgba(1, 1, 1, 0.5);
+}
+
+/* Judul Menu */
+.about,
+.experience,
+.education,
+.skills,
+.interest,
+.award {
+  padding: 120px 150px 0px;
+  color: black;
+  text-align: center;
+}
+.about .judul-menu,
+.experience .judul-menu,
+.education .judul-menu,
+.skills .judul-menu,
+.interest .judul-menu,
+.award .judul-menu {
+  display: inline-block;
+  font-size: 20px;
+  margin-bottom: 40px;
+  padding: 5px 40px;
+  border: 2px solid black;
+  border-radius: 100px;
+  justify-content: center;
+}
+
+p {
+  font-size: 20px;
+}
+
+/* Tentang Saya */
+.about img {
+  display: block;
+  border-radius: 500px;
+  justify-content: center;
+  margin: 40px auto;
+}
+
+/* Experience */
+.experience .row {
+  display: flex;
+  text-align: left;
+  padding: 10px 10px;
+}
+.experience .icon,
+.education .icon,
+.skills .icon {
+  padding: 0px 20px;
+}
+.experience .row .card .subtitle {
+  font-weight: 600;
+}
+
+/* Education Section */
+.education .row .card .subtitle {
+  font-weight: 400;
+}
+
+.education .row {
+  display: flex;
+  text-align: left;
+  padding: 20px 50px;
+}
+
+/* Skills Section */
+.skills .row {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding: 20px 0px;
+}
+.skills .row .card {
+  padding: 0px 50px;
+  justify-content: center;
+}
+
+.skills .row .card img {
+  height: 100px;
+  border-radius: 20px;
+}
+
+/* Interest Section */
+.interest .row .card {
+  padding-bottom: 50px;
+}
+
+/* Footer */
+footer {
+  background-color: rgb(2, 157, 142);
+  text-align: center;
+  padding: 15px 0px;
+  margin-top: 300px;
+}
+
+footer .medsos {
+  padding: 20px 0px;
+}
+
+footer .medsos a {
+  color: white;
+  margin: 20px;
+}
+
+footer .medsos a:hover {
+  color: #f6bf01ff;
+}
+
+footer .credit p {
+  font-size: 15px;
+}
+
+footer .credit a {
+  color: rgb(38, 38, 38);
+  font-weight: 600;
+}
+
+html {
+  scroll-behavior: smooth;
+}
